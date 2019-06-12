@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit_text_input"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="210dp"
+        android:hint="Minuten"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/edit_text_cooldown"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit_text_input"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="163dp"
+        android:hint="Minuten"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <EditText
+        android:id="@+id/edit_text_firstIntervall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit_text_input"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="109dp"
+        android:hint="Sekunden"
+        android:inputType="number"
+        android:maxLength="6" />
+
+    <EditText
+        android:id="@+id/edit_text_secondIntervall"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/edit_text_input"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="58dp"
+        android:hint="Sekunden"
+        android:inputType="number"
+        android:maxLength="6" />
+
+    <EditText
+        android:id="@+id/edit_text_intervall_count"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_intervall_count"
+        android:layout_toEndOf="@+id/text_intervall_count"
+        android:hint="Wiederholungen"
+        android:inputType="number"
+        android:maxLength="4" />
+
+    <TextView
+        android:id="@+id/text_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Training"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_warmup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_cooldown"
+        android:layout_marginBottom="19dp"
+        android:layout_toStartOf="@+id/edit_text_input"
+        android:text="WarmUp: "
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_cooldown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_firstIntervall"
+        android:layout_marginBottom="19dp"
+        android:layout_toStartOf="@+id/edit_text_secondIntervall"
+        android:text="Cooldown: "
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_firstIntervall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_secondIntervall"
+        android:layout_marginBottom="18dp"
+        android:layout_toStartOf="@+id/edit_text_input"
+        android:text="Intervall 1.: "
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_secondIntervall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/text_cooldown"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="59dp"
+        android:text="Intervall 2.: "
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_intervall_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toStartOf="@+id/edit_text_input"
+        android:text="Anzahl Int.: "
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/countdown_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/countdown_start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="157dp"
+        android:text="Training starten" />
+
+    <Button
+        android:id="@+id/button_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/countdown_text"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="255dp"
+        android:text="Übernehmen" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/countdown_start_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:text="Reset" />
+
+</RelativeLayout>
